@@ -3,7 +3,7 @@
 compression-level = 9         # compression level for module zips. between 1 and 9
 logging-to-file = true        # enables logging of every patch process to a seperate file
 enable-magisk-update = true   # set this to false if you do not want to receive updates for the module in magisk app
-parallel-jobs = 2             # max number of concurrent building jobs
+parallel-jobs = 3             # max number of concurrent building jobs
 update-prebuilts = true       # dont touch this
 build-mindetach-module = true
 
@@ -67,23 +67,29 @@ merge-integrations = true
 build-mode = "apk"
 excluded-patches = "playback-speed sim-spoof"
 included-patches = "disable-login-requirement downloads feed-filter fix-google-login hide-ads settings show-seekbar"
-version = "auto"
+version = "27.8.3"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 merge-integrations = true
 
 [Spotify]
-enabled = false
 build-mode = "apk"
+excluded-patches = ""
+included-patches = "disable-capture-restriction hide-premium-navbar spotify-theme"
 version = "auto"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
+merge-integrations = true
 
 [Citra]
 enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/citra-emulator/citra-emulator/"
 
 [Backdrops]
-enabled = false
+build-mode = "apk"
+excluded-patches = ""
+included-patches = "pro-unlock"
+version = "latest"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers/"
+merge-integrations = true
 
 [WarnWetter]
 enabled = false
