@@ -3,7 +3,7 @@
 compression-level = 9         # compression level for module zips. between 1 and 9
 logging-to-file = true        # enables logging of every patch process to a seperate file
 enable-magisk-update = true   # set this to false if you do not want to receive updates for the module in magisk app
-parallel-jobs = 3             # max number of concurrent building jobs
+parallel-jobs = 2             # max number of concurrent building jobs
 update-prebuilts = true       # dont touch this
 build-mindetach-module = true
 
@@ -11,7 +11,7 @@ build-mindetach-module = true
 [YouTube]
 enabled = true                                                        # add 'enabled = false' key to entries to not build them
 build-mode = "both"                                                   # 'both', 'apk' or 'module'
-excluded-patches = "debugging"                                        # whitespace seperated list of patches to exclude (multiline strings are not supported)
+excluded-patches = "always-autorepeat debugging"                                        # whitespace seperated list of patches to exclude (multiline strings are not supported)
 included-patches = ""                                                 # whitespace seperated list of patches to include
 version = "auto"                                                      # 'auto', 'latest' or a custom one like '17.40.41'
 exclusive-patches = false                                             # excludes all patches by default
@@ -64,12 +64,15 @@ apkmirror-dlurl = "https://www.apkmirror.com/apk/twitch-interactive-inc/twitch/"
 merge-integrations = true
 
 [TikTok]
+build-mode = "apk"
+excluded-patches = "playback-speed sim-spoof"
+included-patches = "disable-login-requirement downloads feed-filter fix-google-login hide-ads settings show-seekbar"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/tiktok-pte-ltd/tik-tok-including-musical-ly/"
 merge-integrations = true
 
 [Spotify]
-enabled = true
+enabled = false
 build-mode = "apk"
 version = "auto"
 uptodown-dlurl = "https://spotify.en.uptodown.com/android"
@@ -79,7 +82,7 @@ enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/citra-emulator/citra-emulator/"
 
 [Backdrops]
-enabled = true
+enabled = false
 apkmirror-dlurl = "https://www.apkmirror.com/apk/backdrops/backdrops-wallpapers/"
 
 [WarnWetter]
